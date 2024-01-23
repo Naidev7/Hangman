@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman Game</title>
+    <link rel="shortcut icon" href="#">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="game-start js-startContainer">
+      <div class="content">
+        <img src="images/victory.gif" alt="gif" />
+        <h4>Welcome to the hangman game !</h4>
+        <p>
+          In this game you must guess the randomly selected word using a clue
+        </p>
+        <button class="playBtn js-startBtn">Play game</button>
+      </div>
+    </div>
+    <div class="game-modal js-endContainer hidden">
+      <div class="content">
+        <img src="images/lost.gif" alt="gif" />
+        <h4>Game over!</h4>
+        <p >The correct word was: <b class="js-failWord">rainbow</b></p>
+        <p >Please refresh the page before play the game for the correct functionality</p>
+        <button class="playBtn js-endBtn">Play game</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="hangman-box">
+        <img class="js-imgBody" src="" />
+        <h1>Hangman Game</h1>
+      </div>
+      <div class="game-box">
+        <ul class="word-display js-ulContainer">
+        </ul>
+        <h4 class="hint-text js-hint">
+          Hint:
+          <b>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</b>
+        </h4>
+        <h4 class="guesses-text">
+          Incorrect guesses:
+          <b class="js-acc">0 </b><b>/ </b><b class="js-attempts"></b>
+        </h4>
+        <div class="keyboard">
+          <button class="js-btn">A</button><button class="js-btn">B</button
+          ><button class="js-btn">C</button><button class="js-btn">D</button
+          ><button class="js-btn">E</button><button class="js-btn">F</button
+          ><button class="js-btn">G</button><button class="js-btn">H</button
+          ><button class="js-btn">I</button><button class="js-btn">J</button
+          ><button class="js-btn">K</button><button class="js-btn">L</button
+          ><button class="js-btn">M</button><button class="js-btn">N</button
+          ><button class="js-btn">Ñ</button><button class="js-btn">O</button
+          ><button class="js-btn">P</button><button class="js-btn">Q</button
+          ><button class="js-btn">R</button><button class="js-btn">S</button
+          ><button class="js-btn">T</button><button class="js-btn">U</button
+          ><button class="js-btn">V</button><button class="js-btn">W</button
+          ><button class="js-btn">X</button><button class="js-btn">Y</button
+          ><button class="js-btn">Z</button>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

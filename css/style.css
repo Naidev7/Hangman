@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Coming Soon", cursive;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 15px;
+  background:#AF2A88;
+}
+.container {
+  width: 850px;
+  background: #fff;
+  display: flex;
+  align-items: flex-end;
+  gap: 70px;
+  padding: 60px 40px;
+  border-radius: 10px;
+}
+.hangman-box {
+  > img {
+    max-width: 270px;
+  }
+  > h1 {
+    font-size: 1.45rem;
+    margin-top: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bolder;
+  }
+}
+.word-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  > .letter {
+    width: 28px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 3px solid black;
+    margin-bottom: 40px;
+  }
+  > .guessed {
+    border-color: transparent;
+    margin: -40px 0 35px;
+  }
+}
+.game-box {
+  > h4 {
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    > b {
+      font-weight: 600;
+    }
+  }
+  > .guesses-text {
+    > b {
+      color: red;
+    }
+  }
+  > .keyboard {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 40px;
+    > button {
+      width: calc(100% / 9 - 5px);
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      background:#AF2A88;
+      border-radius: 4px;
+      padding: 7px;
+      border: none;
+    }
+    > button:hover {
+      background: #EE8AD0;
+    }
+  }
+}
+.game-start {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  > .content {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    height: 45vh;
+    margin-top: 210px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    > img {
+      margin-top: 15px;
+      max-width: 130px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.game-start {
+  h4 {
+    font-size: 1.53rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.15rem;
+    margin: 20px 0 30px;
+    font-weight: 500;
+    > b {
+      color:#EE8AD0;
+    }
+  }
+  .playBtn {
+    padding: 20px 23px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background:#EE8AD0;
+    border-radius: 4px;
+    padding: 7px;
+    border: none;
+  }
+}
+.game-modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+  > .content {
+    background: #fff;
+    max-width: 420px;
+    width: 100%;
+    height: 45vh;
+    margin-top: 30%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    > img {
+      margin-top: 15px;
+      max-width: 130px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.game-modal {
+  h4 {
+    font-size: 1.53rem;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.15rem;
+    margin: 20px 0 30px;
+    font-weight: 500;
+    > b {
+      color:#EE8AD0;
+      font-weight: 600;
+    }
+  }
+  .playBtn {
+    padding: 20px 23px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #EE8AD0;
+    border-radius: 4px;
+    padding: 7px;
+    border: none;
+  }
+}
+
+@media (max-width:782px) {
+    .container{
+        flex-direction: column;
+        padding: 30px 15px;
+        margin: 20px 0;
+        align-items: center; 
+    }
+    .hangman-box {
+        > img {
+          max-width: 200px;
+        }
+        > h1 {
+            font-size: 0.90rem;
+            margin-top: 10px;
+        }
+    }
+    .game-modal{
+        padding: 30px 15px;
+        > .content{
+            height: 55vh;
+        }
+    }
+    .game-start{
+      padding: 20px 15px;
+      > .content{
+        margin-top: 40px;
+          height: 55vh;
+      }
+    }
+}
+.hidden{
+  display: none;
+}
+.hiddenLetter{
+  color: transparent;
+}
