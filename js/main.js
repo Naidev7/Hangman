@@ -12,6 +12,8 @@ let body = document.querySelector(".js-imgBody");
 let failWord = document.querySelector(".js-failWord");
 let endBtn = document.querySelector(".js-endBtn");
 let attemptsContainer = document.querySelector(".js-attempts");
+let winText = document.querySelector(".js-winText");
+let winMsj = document.querySelector(".js-msj");
 
 //Variables globales de letra y tecla
 let wordSelected = "";
@@ -364,9 +366,13 @@ const correctLetter = (letter) => {
       wrongLetter(wrong, attempts);
     }
   };
-/*   if(hits >= wordSelected.length ){
-    winGame();
-  } */
+   if(hits === wordSelected.length ){
+    startContainer.classList.remove("hidden");
+    winText.innerHTML = 'congratulations, you have won!';
+    winMsj.innerHTML = 'Please refresh the page before play the game for the correct functionality';
+
+  /*   winGame(); */
+  } 
 };
 
 //Función que compara que la palabra selecionada incluya la letra o no
