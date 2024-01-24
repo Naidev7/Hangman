@@ -337,10 +337,9 @@ const endGame = () => {
 //Función que maneja los errores de letra
 const wrongLetter = (wrong, attempts) => {
   incorrectGuesses.innerHTML = wrong;
-  console.log('estos son mis fallos: ', wrong);
-  body.src = `/images/hangman-${wrong}.jpg`;
+  body.src = `./images/hangman-${wrong}.jpg`;
   if (wrong === word.length || wrong === 6) {
-    body.src = "/images/hangman-6.jpg";
+    body.src = "./images/hangman-6.jpg";
     wrong = 0;
     incorrectGuesses.innerHTML = '0';
     endGame();

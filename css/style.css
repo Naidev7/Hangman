@@ -213,7 +213,7 @@ body {
     .game-modal{
         padding: 30px 15px;
         > .content{
-            height: 55vh;
+            height: 5vh;
         }
     }
     .game-start{
