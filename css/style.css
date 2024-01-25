@@ -13,17 +13,18 @@ body {
   background:#AF2A88;
 }
 .container {
-  width: 850px;
+  width: 90vw;
   background: #fff;
   display: flex;
-  align-items: flex-end;
+  align-items: stretch;
+  flex-direction: column;
   gap: 70px;
   padding: 60px 40px;
   border-radius: 10px;
 }
 .hangman-box {
   > img {
-    max-width: 270px;
+    max-width: 170px;
   }
   > h1 {
     font-size: 1.45rem;
@@ -75,14 +76,15 @@ body {
     justify-content: center;
     margin-top: 40px;
     > button {
-      width: calc(100% / 9 - 5px);
+      text-align: center;
+      width: 25px;
       color: #fff;
       font-size: 1rem;
       font-weight: 600;
       cursor: pointer;
       background:#AF2A88;
       border-radius: 4px;
-      padding: 7px;
+      padding: 10px;
       border: none;
     }
     > button:hover {
@@ -101,6 +103,7 @@ body {
   justify-content: center;
   background: rgba(0, 0, 0, 0.6);
   > .content {
+    margin: 30px 10px;
     background: #fff;
     max-width: 420px;
     width: 100%;
@@ -110,6 +113,7 @@ body {
     padding: 10px;
     > img {
       max-width: 130px;
+      margin: 30px 0;
     }
   }
 }
@@ -117,16 +121,18 @@ body {
   h4 {
     font-size: 1.53rem;
     font-weight: bold;
+    margin-bottom: 30px;
   }
   p {
     font-size: 1.15rem;
-    margin: 10px 0 10px 0;
+    margin-bottom: 30px;
     font-weight: 500;
     > b {
       color:#EE8AD0;
     }
   }
   .playBtn {
+    margin-top: 30px;
     color: #fff;
     font-size: 1rem;
     font-weight: 600;
@@ -148,6 +154,7 @@ body {
   justify-content: center;
   background: rgba(0, 0, 0, 0.6);
   > .endContent {
+    margin: 40px 10px;
     background: #fff;
     max-width: 420px;
     width: 100%;
@@ -190,7 +197,8 @@ body {
   }
 }
 
-@media (max-width:782px) {
+@media (min-width:782px) {
+
     .container{
         flex-direction: column;
         padding: 30px 15px;
@@ -206,18 +214,6 @@ body {
             margin-top: 10px;
         }
     }
-    .game-start{
-        > .content{
-         margin-top: 250px;
-          height: 35vh;
-      }
-    };
-    .game-modal{
-      > .endContent{
-        margin-top: 250px;
-        height: 35vh;
-    }
-  }
 }
 .hidden{
   display: none;
