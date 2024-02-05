@@ -12,8 +12,6 @@ let body = document.querySelector(".js-imgBody");
 let failWord = document.querySelector(".js-failWord");
 let endBtn = document.querySelector(".js-endBtn");
 let attemptsContainer = document.querySelector(".js-attempts");
-let winText = document.querySelector(".js-winText");
-let winMsj = document.querySelector(".js-msj");
 
 //Variables globales de letra y tecla
 let wordSelected = "";
@@ -324,6 +322,7 @@ const handleReset = (event)=>{
   endContainer.classList.add('hidden');
   body.src = "";
   handleStart();
+  
 }
 
 
@@ -337,42 +336,51 @@ const endGame = () => {
 //Función que maneja los errores de letra
 const wrongLetter = (wrong, attempts) => {
   incorrectGuesses.innerHTML = wrong;
-  body.src = `./images/hangman-${wrong}.jpg`;
+  console.log('estos son mis fallos: ', wrong);
+  body.src = `/images/hangman-${wrong}.jpg`;
   if (wrong === word.length || wrong === 6) {
-    body.src = "./images/hangman-6.jpg";
+    body.src = "/images/hangman-6.jpg";
     wrong = 0;
     incorrectGuesses.innerHTML = '0';
     endGame();
   }
+
 };
 
 //Función que maneja si se gana del juego
 const winGame = ()=>{
   wrong = 0;
   incorrectGuesses.innerHTML = wrong;
-  startContainer.classList.remove('hidden');
+  startContainer.classList.add("hidden");
   handleStart();
 }
 
-//Función que maneja los aciertos de letras
+
+// Función que maneja los aciertos de letras
 const correctLetter = (letter) => {
   const { children } = ulContainer;
+  let letterFound = false;
+
   for (let i = 0; i < children.length; i++) {
     if (children[i].innerHTML === letter) {
       children[i].classList.remove("hiddenLetter");
       hits++;
-    } else{
-      wrongLetter(wrong, attempts);
+      letterFound = true;
     }
-  };
-   if(hits === wordSelected.length ){
-    startContainer.classList.remove("hidden");
-    winText.innerHTML = 'congratulations, you have won!';
-    winMsj.innerHTML = 'Please refresh the page before play the game for the correct functionality';
+  }
 
-  /*   winGame(); */
-  } 
+  if (!letterFound) {
+    wrongLetter(wrong, attempts);
+  }
+
+  if (hits >= wordSelected.length) {
+    if(startContainer.classList.remove('hidden')){
+      winGame();
+    }
+  }
 };
+
+
 
 //Función que compara que la palabra selecionada incluya la letra o no
 const compareLetters = (letter) => {
@@ -393,6 +401,10 @@ const handleLetters = (event) => {
 
 //Función inicial
 const handleStart = () => {
+  hits = 0;
+  wrong = 0;
+  attempts = 0;
+
   for (const btn of btns) {
     btn.addEventListener("click", handleLetters);
   };
