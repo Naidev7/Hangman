@@ -1,33 +1,35 @@
-Juego del Ahorcado en JavaScript
-¡Bienvenido al Juego del Ahorcado desarrollado con JavaScript, HTML y CSS! Este proyecto ha sido una emocionante travesía durante mi aprendizaje en el módulo de JavaScript, donde me he enfrentado a desafíos al trabajar con diversas estructuras de datos y sus métodos funcionales.
+# Hangman Game in JavaScript
+Welcome to the Hangman Game developed using JavaScript, HTML, and CSS! This project has been an exciting journey during my learning in the JavaScript module, where I've faced challenges while working with various data structures and their functional methods.
 
-Descripción del Juego
-El Juego del Ahorcado es una implementación clásica del famoso juego de palabras. Utiliza tus habilidades en JavaScript para adivinar la palabra oculta antes de que se complete el dibujo del ahorcado.
+## Game Description
+The Hangman Game is a classic implementation of the famous word-guessing game. Use your JavaScript skills to guess the hidden word before the hangman drawing is completed.
 
-Cómo Utilizar el Juego
-Descargar o Clonar el Repositorio: Clona este repositorio en tu máquina local o descárgalo como archivo ZIP.
+## How to Use the Game
+Download or Clone the Repository:
+1. Clone this repository to your local machine or download it as a ZIP file.
 
-bash
+```bash
 Copy code
-git clone https://github.com/tu-usuario/ahorcado-javascript.git
-Abrir el Juego en el Navegador: Abre el archivo index.html en tu navegador web favorito para comenzar a jugar.
+git clone https://github.com/Naidev7/Hangman
+```
 
-Instrucciones del Juego:
+2. Open the Game in the Browser
+Open the index.html file in your favorite web browser to start playing.
 
-Selecciona letras para adivinar la palabra oculta.
-Cada letra incorrecta dibuja una parte del ahorcado.
-Intenta adivinar la palabra antes de que se complete el ahorcado.
-Retos y Estructuras de Datos
-Durante el desarrollo de este juego, me he enfrentado a desafíos específicos relacionados con la gestión de datos y estructuras, como almacenar la palabra oculta, llevar un seguimiento de las letras adivinadas y gestionar los intentos del jugador. He utilizado métodos funcionales para mejorar la eficiencia del código, aunque reconozco que podría beneficiarse de una refactorización.
+## Game Instructions
+Select letters to guess the hidden word.
+Each incorrect letter draws a part of the hangman.
+Try to guess the word before the hangman drawing is completed.
+Challenges and Data Structures
+During the development of this game, I've faced specific challenges related to data management and structures, such as storing the hidden word, keeping track of guessed letters, and managing player attempts. I've used functional methods to improve code efficiency, although I acknowledge that it could benefit from refactoring.
 
-Refactorización del Código
-Dado que este proyecto ha sido una parte integral de mi proceso de aprendizaje, el código refleja mi evolución y crecimiento en JavaScript. Planeo realizar una refactorización para mejorar la estructura y la legibilidad del código, aplicando las mejores prácticas y patrones aprendidos.
+### Code Refactoring
+Since this project has been an integral part of my learning process, the code reflects my evolution and growth in JavaScript. I plan to refactor it to improve code structure and readability, applying the best practices and patterns learned.
 
-Agradecimientos
-Quiero expresar mi agradecimiento por la oportunidad de trabajar en este proyecto mientras aprendía. Ha sido un viaje educativo y desafiante que me ha permitido mejorar mis habilidades en JavaScript.
+### Acknowledgments
+I want to express my gratitude for the opportunity to work on this project while learning. It has been an educational and challenging journey that has allowed me to enhance my skills in JavaScript.
 
-Feedback
-Tu opinión es fundamental para mejorar este proyecto. Si has probado el Juego del Ahorcado, por favor, comparte tus comentarios, sugerencias o cualquier observación que puedas tener. ¡Aprecio tu apoyo y tiempo!
+## Feedback
+Your feedback is crucial to improving this project. If you've tried the Hangman Game, please share your comments, suggestions, or any observations you may have. I appreciate your support and time!
 
-¡Diviértete jugando al Juego del Ahorcado en JavaScript! 🎉
-
+# Have fun playing the Hangman Game in JavaScript! 🎉
